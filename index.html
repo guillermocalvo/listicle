@@ -44,7 +44,11 @@
 		<link rel="stylesheet" type="text/css" href="code/shared/listicle.css"/>
 
 		<script>
-			var urlMyOpmlFile = "http://scripting.com/listicle/usingopml3/list.opml";
+			var opmlId = location.pathname.substr(location.pathname.lastIndexOf('/') + 1);
+			var urlMyOpmlFile = opmlId ?
+				"http://storage.littleoutliner.com/users/gcalvo/myOutlines/" + opmlId + ".opml"
+				:
+				"http://scripting.com/listicle/usingopml3/list.opml";
 
 			function startup () {
 				console.log ("startup");
