@@ -1,13 +1,5 @@
 var urlDefaultListicleHtml = "http://fargo.io/code/shared/listicle.html";
 
-document.write ("<script src=\"http://fargo.io/code/shared/xml.js\"></script>");
-document.write ("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fargo.io/code/slick/slick.css\"/>");
-document.write ("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fargo.io/code/slick/slick-theme.css\"/>");
-document.write ("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fargo.io/code/slick/slick-theme.css\"/>");
-document.write ("<script src=\"http://fargo.io/code/slick/slick.min.js\"></script>");
-document.write ("<script src=\"http://fargo.io/code/shared/emojify.js\"></script>");
-document.write ("<script src=\"http://fargo.io/code/storage/api.js\"></script>"); //2/8/17 by DW
-
 var listiclePrefs = {
 	ixCurrentCard: 0
 	};
@@ -19,9 +11,9 @@ var listicleData = {
 	"opacityBackground": "0.6",
 	"itemLabel": "Idea",
 	"author": {
-		"name": "Bull Mancuso",
-		"email": "bullmancuso@gmail.com",
-		"web": "http://bullmancuso.com/"
+		"name": "Guillermo Calvo",
+		"email": "listicle@guillermo.in",
+		"web": "https://leakyabstractions.com/"
 		},
 	urlParamName: "idea",
 	pageChangedCallback: listiclePageChanged,
