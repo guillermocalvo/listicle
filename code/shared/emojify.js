@@ -1,7 +1,7 @@
 
 function emojiProcess (s, myDirectory) {
 	if (myDirectory === undefined) { //1/11/17 by DW
-		myDirectory = "http://fargo.io/code/emojify/images/emoji";
+		myDirectory = "code/emojify/images/emoji";
 		}
 	else {
 		if (endsWith (myDirectory, "/")) { //1/11/17 by DW
