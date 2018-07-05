@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<opml version="2.0">
+	<head>
+		<title>list.opml</title>
+		<dateModified>Tue, 06 Mar 2018 14:42:49 GMT</dateModified>
+		<expansionState></expansionState>
+		<vertScrollState>1</vertScrollState>
+		<windowTop>300</windowTop>
+		<windowLeft>700</windowLeft>
+		<windowBottom>900</windowBottom>
+		<windowRight>1500</windowRight>
+		</head>
+	<body text="list.opml">
+		<outline text="This is the new way of doing slides."></outline>
+		<outline text="Instead of arranging a JSON object, with proper JSON syntax, you just type it into an outline."></outline>
+		<outline text="We take care of processing all the bits. "></outline>
+		<outline text="So you don't have to."></outline>
+		<outline text="Much more fun! "></outline>
+		<outline text="Love, Mr Dave"></outline>
+		</body>
+	</opml>

@@ -45,10 +45,7 @@
 
 		<script>
 			var opmlId = location.pathname.substr(location.pathname.lastIndexOf('/') + 1);
-			var urlMyOpmlFile = opmlId ?
-				"http://storage.littleoutliner.com/users/gcalvo/myOutlines/" + opmlId + ".opml"
-				:
-				"http://scripting.com/listicle/usingopml3/list.opml";
+			var urlMyOpmlFile = opmlId ? "http://storage.littleoutliner.com/users/gcalvo/myOutlines/" + opmlId + ".opml" : "index.opml";
 
 			function startup () {
 				console.log ("startup");
