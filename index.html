@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>listicle.io</title>  
+		<title>listicle.io</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+
 		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script>
 		<link href="http://fargo.io/code/bootstrap.css" rel="stylesheet">
 		<script src="http://fargo.io/code/bootstrap.min.js"></script>
@@ -13,7 +13,7 @@
 		<script src="http://fargo.io/code/node/shared/alertdialog.js"></script>
 		<script src="http://fargo.io/code/shared/beep.js"></script>
 		<script src="http://fargo.io/code/shared/emojify.js"></script>
-		
+
 		<script>
 			var appConsts = {
 				domain: "listicle.io",
@@ -22,10 +22,10 @@
 			var appPrefs = {
 				ixCurrentClue: 1 //1-based index into the clues array
 				};
-			
+
 			var jsonUrl = "list.json";
-			var theData; 
-			
+			var theData;
+
 			function restorePrefs () {
 				console.log ("restorePrefs: " + localStorage.listiclePrefsForAll);
 				if (localStorage.listiclePrefsForAll != undefined) {
@@ -52,26 +52,26 @@
 				allPrefs [window.location.href] = JSON.stringify (appPrefs); //no formatting
 				localStorage.listiclePrefsForAll = jsonStringify (allPrefs);
 				console.log ("savePrefs: " + localStorage.listiclePrefsForAll);
-				
+
 				}
 			function updateArrows () {
 				var normalcolor = "white", disabledcolor = "gray";
 				var leftarrowcolor, rightarrowcolor;
-				
+
 				if (appPrefs.ixCurrentClue == 1) {
 					leftarrowcolor = disabledcolor;
 					}
 				else {
 					leftarrowcolor = normalcolor;
 					}
-				
+
 				if (appPrefs.ixCurrentClue == theData.items.length) {
 					rightarrowcolor = disabledcolor;
 					}
 				else {
 					rightarrowcolor = normalcolor;
 					}
-				
+
 				$("#idLeftArrow").css ("color", leftarrowcolor);
 				$("#idRightArrow").css ("color", rightarrowcolor);
 				}
@@ -91,13 +91,13 @@
 				savePrefs ();
 				}
 			function twitterIconClick () {
-				
+
 				var url = window.location.href;
 				if (stringContains (url, "?")) {
 					url = stringNthField (url, "?", 1);
 					}
 				url += "?clue=" + appPrefs.ixCurrentClue;
-				
+
 				var cluetext = stripMarkup (theData.items [appPrefs.ixCurrentClue - 1]);
 				var text = encodeURIComponent (theData.itemLabel + " #" + appPrefs.ixCurrentClue + ": " + cluetext + " " + url);
 				window.open ("https://twitter.com/intent/tweet?text=" + text, "_blank", "left=200,top=300,location=no,height=350,width=600,scrollbars=no,status=no");
@@ -132,9 +132,9 @@
 				restorePrefs ();
 				readHttpFile (jsonUrl, function (s) {
 					theData = JSON.parse (s);
-					
+
 					console.log ("startup: " + theData.items.length + " items in theData.items.");
-					
+
 					var ixclue = appPrefs.ixCurrentClue;
 					var clueparam = getURLParameter ("clue");
 					if (clueparam != "null") {
@@ -147,23 +147,23 @@
 							}
 						}
 					showClue (ixclue);
-					
+
 					$("#idBackgroundImage").css ("background-image", "url(" + theData.urlBackgroundImage + ")");
-					
+
 					if (theData.opacityBackground != undefined) {
 						$("#idOverlay").css ("opacity", theData.opacityBackground);
 						}
-					
-					
+
+
 					var rtlink = "<span class=\"spInfoLink\"><a onclick=\"twitterIconClick ()\" title=\"Send this clue to your Twitter followers.\"><i class=\"fa fa-twitter\"></i></a></span>"
 					var infolink = "<span class=\"spInfoLink\"><a onclick=\"infoIconClick ()\"><i class=\"fa fa-info-circle\"></i></a></span>";
 					var homelink = "<span class=\"spHomeLink\"><a onclick=\"homeIconClick ()\"><i class=\"fa fa-home\"></i></a></span>";
 					var titlelink =  "<a href=\"" + theData.link + "\" target=\"_blank\">" + theData.title + "</a>"
-					
+
 					if (theData.author.name != undefined) {
 						titlelink = theData.author.name + ": " + titlelink;
 						}
-					
+
 					$("#idTitle").html (homelink + titlelink + infolink + rtlink);
 					$("body").keyup (function (ev) {
 						switch (ev.which) {
@@ -175,7 +175,7 @@
 								break;
 							}
 						});
-					self.setInterval (function () {everySecond ()}, 1000); 
+					self.setInterval (function () {everySecond ()}, 1000);
 					});
 				}
 			</script>
@@ -196,7 +196,7 @@
 				margin-top: 0;
 				border-top: 1px solid silver;
 				z-index: 10;
-				
+
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
@@ -216,11 +216,11 @@
 				}
 			.divListicleBody {
 				position: relative;
-				
+
 				width: 60%;
 				margin-left: auto;
 				margin-right: auto;
-				
+
 				z-index: 30;
 				}
 			.divListicleControls {
@@ -243,7 +243,7 @@
 				color: white;
 				text-shadow: 1px 1px black;
 				line-height: 110%;
-				
+
 				padding-bottom: 10%;
 				}
 			.divListicleText a {
@@ -259,7 +259,7 @@
 				text-decoration: none;
 				text-shadow: 1px 1px black;
 				}
-			
+
 			.divFooter {
 				color: silver;
 				font-size: 14px;
@@ -276,7 +276,7 @@
 				cursor: pointer;
 				color: silver;
 				}
-			
+
 			.divClueAndText {
 				margin-top: 20%;
 				}
@@ -296,11 +296,11 @@
 				margin-left: 95%;
 				z-index: 30;
 				}
-			
+
 			</style>
 		<style> /* styles for phone */
-			@media only screen 
-			and (min-device-width : 320px) 
+			@media only screen
+			and (min-device-width : 320px)
 			and (max-device-width : 480px) {
 				.divListicleBody {
 					width: 95%;
@@ -347,14 +347,14 @@
 						<div class="divArrows">
 							</div>
 						</div>
-					
+
 					<div class="divClueAndText">
 						<div class="divClueLink" id="idClueLink">
 							</div>
 						<div class="divListicleText" id="idListicleText">
 							</div>
 						</div>
-					
+
 					</div>
 				</div>
 			</div>
