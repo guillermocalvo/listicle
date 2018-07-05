@@ -1,0 +1,210 @@
+.divListicleContainer {
+	padding: 0;
+	}
+.divListicleBackgroundImage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	border-top: 1px solid silver;
+	z-index: 10;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+.divListicleOverlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	z-index: 20;
+	background-color: black;
+	opacity: 0.5;
+	}
+
+.divListiclePageTextOverlay {
+	position: relative;
+	background-color: black;
+	opacity: 0.25;
+	height: 0;
+	width: 0;
+	z-index: 0;
+	border-radius: 5px;
+	}
+.divListicleTextContainer {
+	padding-left: 1em;
+	padding-right: 10px;
+	}
+
+.divListicleIdea {
+	position: relative;
+	background-color: black;
+	opacity: 0.25;
+	padding-left: 10px;
+	padding-right: 10px;
+	z-index: 20;
+	}
+.divListicleTextInIdea {
+	position: relative;
+	z-index: 30;
+	}
+.divListicleBody {
+	position: relative;
+	
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	z-index: 30;
+	}
+.divListicleControls {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	font-size: 18px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+.divListicleControls a {
+	color: white;
+	cursor: pointer;
+	}
+.divListicleArrow {
+	font-size: 24px;
+	}
+.divTitle {
+	color: white;
+	font-size: 16px;
+	}
+.divListicleText, .divListicleText li, .divListitcleItemTitle {
+	font-size: 36px;
+	color: white;
+	text-shadow: 1px 1px black;
+	line-height: 140%;
+	}
+.divListitcleItemTitle {
+	font-size: 42px;
+	text-align: center;
+	margin-bottom: .7em;
+	}
+.divListicleText {
+	padding-bottom: 10%;
+	}
+.divListicleText ul {
+	margin-left: 50px;
+	}
+.divListicleText li {
+	list-style-type: none;
+	}
+.divListicleText a {
+	color: white;
+	}
+.divListiclePermalink {
+	font-size: 24px;
+	margin-top: 10px;
+	}
+.divListiclePermalink a {
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	text-shadow: 1px 1px black;
+	}
+.divListicleText a {
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	}
+.divFooter {
+	color: silver;
+	font-size: 14px;
+	height: 6em;
+	padding-left: 5em;
+	padding-right: 5em;
+	position: fixed;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 30;
+	}
+.divFooter a {
+	cursor: pointer;
+	color: silver;
+	}
+.spInfoLink {
+	margin-left: .5em;
+	}
+.spHomeLink {
+	margin-right: .5em;
+	}
+.divVersionNumber {
+	color: silver;
+	font-size: 14px;
+	height: 2em;
+	padding-right: 1em;
+	position: fixed;
+	bottom: 0;
+	margin-left: 95%;
+	z-index: 30;
+	}
+
+.slick-arrow {
+	display: none !important;
+	}
+* {
+	box-sizing: border-box;
+	}
+.slider {
+	width: 90%;
+	margin: 20px auto;
+	}
+.slick-slide {
+	margin-top: 40px;
+	}
+.slick-slide img {
+	display: inline-block;
+	}
+.slick-prev:before, .slick-next:before {
+	color: black;
+	}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.divListicleBody {
+		width: 95%;
+		}
+	.divListiclePermalink {
+		font-size: 16px;
+		text-shadow: none;
+		}
+	.divListicleText {
+		font-size: 22px;
+		text-shadow: none;
+		}
+	.divLinkAndText {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 105%;
+		margin-top: 15%;
+		}
+	.divListicleControls {
+		margin-top: 10px;
+		font-size: 16px;
+		}
+	.divFooter {
+		padding-left: 1em;
+		padding-right: 1em;
+		font-size: 12px;
+		line-height: 100%;
+		}
+	}
