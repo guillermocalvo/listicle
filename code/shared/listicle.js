@@ -342,7 +342,11 @@ function buildListicleFromTheData (callback) {
 		startKeyboard ();
 		startOverlay ();
 		viewExpandedTweets (); //2/8/17 by DW
-		self.setInterval (listicleEverySecond, 1000); //1/6/17 by DW
+		if( location.protocol == "https:" && listicleData.urlUpdateSocket.startsWith('ws:') ) {
+			console.warn('Will not subscribe to updates over an insecure WebSocket: ' + listicleData.urlUpdateSocket);
+		} else {
+			self.setInterval (listicleEverySecond, 1000); //1/6/17 by DW
+		}
 		if (callback !== undefined) {
 			callback ();
 			}
