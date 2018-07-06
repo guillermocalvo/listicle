@@ -144,9 +144,11 @@ function updateListicleArrows () {
 	$("#idListicleRightArrow").css ("color", rightarrowcolor);
 	}
 function nextListicleItem () {
+	if(listiclePrefs.ixCurrentCard + 1 >= listicleData.items.length) speakerBeep();
 	$("#idSlickArray").slick ("slickNext");
 	}
 function prevListicleItem () {
+	if(listiclePrefs.ixCurrentCard <= 0) speakerBeep();
 	$("#idSlickArray").slick ("slickPrev");
 	}
 function getListicleItemHtmltext (ix) {
