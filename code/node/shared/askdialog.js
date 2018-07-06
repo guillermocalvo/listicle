@@ -16,7 +16,7 @@ function setupAskDialog (callback) {
 		callback ();
 		}
 	else {
-		readHttpFile ("http://fargo.io/code/node/shared/askdialog.html", function (s) {
+		readHttpFile ("code/node/shared/askdialog.html", function (s) {
 			$("body").prepend (s);
 			$("#idAskDialogInput").on ("keydown", function (event) { //3/22/13 by DW
 				if (event.which == 13) {
