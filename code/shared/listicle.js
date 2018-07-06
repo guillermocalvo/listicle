@@ -1,4 +1,4 @@
-var urlDefaultListicleHtml = "http://fargo.io/code/shared/listicle.html";
+var urlDefaultListicleHtml = "code/shared/listicle.html";
 
 var listiclePrefs = {
 	ixCurrentCard: 0
