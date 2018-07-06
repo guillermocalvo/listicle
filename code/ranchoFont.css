@@ -2,5 +2,5 @@
   font-family: 'Rancho';
   font-style: normal;
   font-weight: 400;
-  src: local('Rancho'), url(http://themes.googleusercontent.com/static/fonts/rancho/v3/IhBhtOi02NLuvxWW4RuNVg.ttf) format('truetype');
+  src: local('Rancho'), url(//themes.googleusercontent.com/static/fonts/rancho/v3/IhBhtOi02NLuvxWW4RuNVg.ttf) format('truetype');
 }
