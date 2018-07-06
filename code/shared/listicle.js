@@ -317,7 +317,7 @@ function buildListicleFromTheData (callback) {
 				}
 			}
 		else {
-			readHttpFileThruProxy (urlDefaultListicleHtml, undefined, function (s) {
+			readHttpFile (urlDefaultListicleHtml, function (s) {
 				if (s === undefined) { 
 					alertDialog ("There was a problem reading the listicle HTML code.");
 					}
