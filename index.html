@@ -45,7 +45,8 @@
 
 		<script>
 			var opmlId = location.pathname.substr(location.pathname.lastIndexOf('/') + 1);
-			var urlMyOpmlFile = opmlId ? "http://storage.littleoutliner.com/users/gcalvo/myOutlines/" + opmlId + ".opml" : "index.opml";
+			var proxy = location.protocol == "https:" ? "https://cors-anywhere.herokuapp.com/" : ""
+			var urlMyOpmlFile = opmlId ? proxy + "http://storage.littleoutliner.com/users/gcalvo/myOutlines/" + opmlId + ".opml" : "index.opml";
 
 			function startup () {
 				console.log ("startup");
